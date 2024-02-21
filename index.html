@@ -11,11 +11,22 @@
             <div>
                 <a href="#">.home()</a>
                 <a href="mailto:zielakless@gmail.com">.email()</a>
-                <a href="#">.about()</a>
             </div>
         </header>
         <article>
             <span>MIŁOSZ TY KURWO CZM NIE GADASZ?</span>
+            <div>
+                <span>1. Boot to recovery</span>
+                <span>2. csrutil disable & csrutil authenticated-root disable</span>
+                <span>4. Boot to system</span>
+                <span>5. mkdir -p -m777 ~/mount</span>
+                <span>6. sudo mount -o nobrowse -t apfs /dev/disk1s5 ~/mount</span>
+                <span>7. sudo rm -rf ~/mount/System/Applications/Home.app</span>
+                <span>8. sudo bless --folder ~/mount/System/Library/CoreServices --bootefi --create-snapshot</span>
+                <span>9. Boot to recovery</span>
+                <span>10. csrutil enable && csrutil authenticated-root enable</span>
+                <span>11. Boot to system</span>
+            </div>
             <div class="links">
                 <a style="color: #4267B2" href="https://www.facebook.com/zielakless/"><i class="fa-brands fa-facebook-f"></i></a>
                 <a style="color: #FFFC00" href="https://www.snapchat.com/add/zielakless"><i class="fa-brands fa-snapchat"></i></a>

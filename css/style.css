@@ -1,56 +1,269 @@
 @font-face {
-  font-family: "Roboto Mono";
-  src: url("../fonts/Roboto Mono.ttf");
+  font-family: "Sono";
+  src: url("../ttf/Sono Monospace.ttf");
 }
-a {
+* {
+  all: unset;
   color: #FFFFFF;
-  text-decoration: none;
+  font-family: "Sono";
+  font-size: 15px;
+  pointer-events: none;
+  transition: all 0.25s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
-article {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  left: 50%;
-  position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%);
+a {
+  pointer-events: auto;
 }
-article > .links > a {
+a:hover {
+  cursor: pointer;
+}
+
+button {
+  pointer-events: auto;
+}
+button:hover {
+  cursor: pointer;
+}
+
+g {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
   font-size: 20px;
 }
 
-body, html {
-  background-color: #0e1212;
-  color: #FFFFFF;
-  font-family: "Roboto Mono";
-  font-size: 15px;
+html, body {
+  background-attachment: fixed;
+  background-color: #101010;
+  background-image: url("../png/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
-  margin: 0px;
-  padding: 0px;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+html > header, body > header {
+  align-items: center;
+  background-color: #101010;
+  border-bottom: 1px solid #252525;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  padding-inline: 50px;
+  position: fixed;
+  width: calc(100% - 100px);
+}
+html > header > div:nth-of-type(1), body > header > div:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+html > header > div:nth-of-type(1) > a, body > header > div:nth-of-type(1) > a {
+  align-items: center;
+  background-color: #121212;
+  border: 1px solid #252525;
+  border-radius: 5px;
+  display: flex;
+  height: 18px;
+  justify-content: center;
+  padding: 10px;
+  width: 18px;
+}
+html > header > div:nth-of-type(1) > a:hover, body > header > div:nth-of-type(1) > a:hover {
+  filter: drop-shadow(0px 0px 5px var(--highlightColor));
+}
+html > header > div:nth-of-type(1) > a:hover > i, body > header > div:nth-of-type(1) > a:hover > i {
+  color: var(--highlightColor);
+}
+html > header > div:nth-of-type(2), body > header > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+html > header > div:nth-of-type(2) > a, body > header > div:nth-of-type(2) > a {
+  background-color: #121212;
+  border: 1px solid #252525;
+  border-radius: 5px;
+  padding: 10px;
+}
+html > header > div:nth-of-type(2) > a:hover, body > header > div:nth-of-type(2) > a:hover {
+  filter: drop-shadow(0px 0px 5px var(--highlightColor));
+}
+html > content, body > content {
+  display: flex;
+  flex-direction: column;
+}
+html > content > div, body > content > div {
+  background-color: #121212;
+  padding-block: 25px;
+  padding-inline: 150px;
+}
+html > content > div#about, body > content > div#about {
+  align-items: center;
+  background-color: transparent;
+  border-bottom: 1px solid #252525;
+  display: flex;
+  gap: 15px;
+  height: calc(100vh - 50px);
+  padding-inline: 150px;
+}
+html > content > div#about > img, body > content > div#about > img {
+  border-radius: 50%;
+  height: 128px;
+  width: 128px;
+}
+html > content > div#about > div, body > content > div#about > div {
+  display: flex;
+  flex-direction: column;
+}
+html > content > div#about > div > h1 > g, body > content > div#about > div > h1 > g {
+  background-image: linear-gradient(-45deg, #F64F59 0%, #C471ED 50%, #12C2E9 100%);
+  font-size: 25px;
+}
+html > content > div#expertise, body > content > div#expertise {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+html > content > div#expertise > h1, body > content > div#expertise > h1 {
+  text-align: center;
+}
+html > content > div#expertise > div, body > content > div#expertise > div {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(4, 4fr);
+}
+html > content > div#expertise > div > div, body > content > div#expertise > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+html > content > div#expertise > div > div > div:nth-of-type(1), body > content > div#expertise > div > div > div:nth-of-type(1) {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+html > content > div#expertise > div > div > div:nth-of-type(1) > i, body > content > div#expertise > div > div > div:nth-of-type(1) > i {
+  font-size: 20px;
+}
+html > content > div#expertise > div > div > span, body > content > div#expertise > div > div > span {
+  font-size: 15px;
+}
+html > content > div#expertise > div > div > div:nth-of-type(2), body > content > div#expertise > div > div > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+}
+html > content > div#projects, body > content > div#projects {
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+html > content > div#projects > h1, body > content > div#projects > h1 {
+  text-align: center;
+}
+html > content > div#projects > div, body > content > div#projects > div {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(2, 2fr);
+}
+html > content > div#projects > div > div, body > content > div#projects > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+html > content > div#projects > div > div > img, body > content > div#projects > div > div > img {
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+html > content > div#projects > div > div > div, body > content > div#projects > div > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+html > footer, body > footer {
+  align-items: center;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  padding-block: 25px;
+}
+html > footer > span > a:hover, body > footer > span > a:hover {
+  cursor: default;
+}
+html > footer > span > a > i, body > footer > span > a > i {
+  color: #FF0000;
+  filter: drop-shadow(0px 0px 5px #FF0000);
 }
 
-footer {
-  bottom: 0;
-  color: #682ae9;
-  display: flex;
+.tooltip {
+  position: relative;
+}
+.tooltip:hover .tooltipText {
+  visibility: visible;
+}
+.tooltip > .tooltipText {
+  background-color: #101010;
+  border: 1px solid #252525;
+  border-radius: 5px;
+  left: 50%;
+  margin-left: -58.5px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: 150%;
+  visibility: hidden;
+  width: 100px;
+  z-index: 1;
+}
+.tooltip > .tooltipText::after {
+  border-color: transparent transparent #252525 transparent;
+  border-style: solid;
+  border-width: 5px;
+  bottom: 100%;
+  content: "";
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+}
+
+img {
+  overflow: clip;
+}
+
+script {
+  display: none;
+}
+
+#scrollToTop {
+  align-items: center;
+  background-color: #121212;
+  border: 1px solid #252525;
+  border-radius: 5px;
+  bottom: 20px;
+  display: none;
+  font-size: 20px;
+  height: 18px;
   justify-content: center;
   padding: 10px;
   position: fixed;
-  width: calc(100% - 20px);
+  right: 30px;
+  width: 18px;
+  z-index: 1;
 }
-
-header {
-  color: #682ae9;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  position: fixed;
-  top: 0;
-  width: calc(100% - 20px);
+#scrollToTop:hover {
+  filter: drop-shadow(0px 0px 5px #252525);
 }
-header > div {
-  display: flex;
-  gap: 10px;
-}/*# sourceMappingURL=style.css.map */

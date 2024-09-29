@@ -1,43 +1,102 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="./css/style.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
-        <title>zielakless.github.io() | Home</title>
-    </head>
-    <body>
-        <header>
-            <span>.io()</span>
-            <div>
-                <a href="#">.home()</a>
-                <a href="mailto:zielakless@gmail.com">.email()</a>
-            </div>
-        </header>
-        <article>
-            <span>MIŁOSZ TY KURWO CZM NIE GADASZ?</span>
-            <div>
-                <span>1. Boot to recovery</span>
-                <span>2. csrutil disable & csrutil authenticated-root disable</span>
-                <span>4. Boot to system</span>
-                <span>5. mkdir -p -m777 ~/mount</span>
-                <span>6. sudo mount -o nobrowse -t apfs /dev/disk1s5 ~/mount</span>
-                <span>7. sudo rm -rf ~/mount/System/Applications/Home.app</span>
-                <span>8. sudo bless --folder ~/mount/System/Library/CoreServices --bootefi --create-snapshot</span>
-                <span>9. Boot to recovery</span>
-                <span>10. csrutil enable && csrutil authenticated-root enable</span>
-                <span>11. Boot to system</span>
-                <!----------->
-                <span>defaults write com.apple.finder QuitMenuItem -bool (YES/NO) && killall Finder</span>
-            </div>
-            <div class="links">
-                <a style="color: #4267B2" href="https://www.facebook.com/zielakless/"><i class="fa-brands fa-facebook-f"></i></a>
-                <a style="color: #FFFC00" href="https://www.snapchat.com/add/zielakless"><i class="fa-brands fa-snapchat"></i></a>
-                <a style="color: #FF5700" href="https://www.reddit.com/user/zielakless"><i class="fa-brands fa-reddit-alien"></i></a>
-                <a style="color: #FFFFFF" href="https://github.com/zielakless"><i class="fa-brands fa-github"></i></a>
-            </div>
-        </article>
-        <footer>
-            <span>Made with <i style="color: #e92a2a;" class="fa-solid fa-heart"></i> by Zielak</span>
-        </footer>
-    </body>
+	<head>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<header>
+			<div>
+				<a href="mailto:zielakless@gmail.com" style="--highlightColor: #FFFFFF;"><i class="fa-brands fa-apple"></i></i></a>
+				<a style="--highlightColor: #5865F2;"><i class="fa-brands fa-discord"></i></a>
+				<a href="https://github.com/zielakless" style="--highlightColor: #1B1F23;"><i class="fa-brands fa-github"></i></a>
+				<a href="https://instagram.com/e36zielak" style="--highlightColor: #C936AB;"><i class="fa-brands fa-instagram"></i></a>
+				<a href="https://paypal.me/zielaklesss" style="--highlightColor: #0070E0;"><i class="fa-brands fa-paypal"></i></a>
+				<a href="https://reddit.com/user/zielakless" style="--highlightColor: #FF4500;"><i class="fa-brands fa-reddit"></i></a>
+				<a href="https://snapchat.com/add/zielakless" style="--highlightColor: #FFFB00;"><i class="fa-brands fa-snapchat"></i></a>
+				<a href="https://steamcommunity.com/id/zielakless" style="--highlightColor: #135B8E;"><i class="fa-brands fa-steam"></i></a>
+				<a href="https://x.com/zielakless" style="--highlightColor: #1D9BF0;"><i class="fa-brands fa-x-twitter"></i></a>
+				<a href="https://youtube.com/@zielak8871" style="--highlightColor: #FF0000;"><i class="fa-brands fa-youtube"></i></a>
+			</div>
+			<div>
+				<a href="#about" style="--highlightColor: #7F1EBC;">&lt;about&nbsp;&sol;&gt;</a>
+				<a href="#expertise" style="--highlightColor: #6723B0;">&lt;expertise&nbsp;&sol;&gt;</a>
+				<a href="#projects" style="--highlightColor: #3E2482;">&lt;projects&nbsp;&sol;&gt;</a>
+			</div>
+		</header>
+		<content>
+			<div id="about">
+				<img src="./png/avatar.png"/>
+				<div>
+					<h1>Hi! I'm <g>Zielak</g></h1>
+					<h2>Full Stack Developer</h2>
+				</div>
+			</div>
+			<div id="expertise">
+				<h1>Expertise</h1>
+				<div>
+					<div>
+						<div>
+							<i class="fa-brands fa-html5" style="color: #E44D26;"></i>
+							<h2>HTML5</h2>
+						</div>
+						<span>
+							I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.
+						</span>
+					</div>
+					<div>
+						<div>
+							<i class="fa-brands fa-node" style="color: #80BD00;"></i>
+							<h2>Node.JS</h2>
+						</div>
+						<span>
+							I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.
+						</span>
+					</div>
+					<div>
+						<div>
+							<i class="fa-brands fa-uikit" style="color: #1E87F0;"></i>
+							<h2>UIKit</h2>
+						</div>
+						<span>
+							I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.
+						</span>
+					</div>
+					<div>
+						<div>
+							<i class="fa-brands fa-unity"></i>
+							<h2>Unity</h2>
+						</div>
+						<span>
+							I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.
+						</span>
+					</div>
+				</div>
+			</div>
+			<div id="projects">
+				<h1>Projects</h1>
+				<div>
+					<div>
+						<img src="./png/project1.png" />
+						<div>
+							<h1>neoo</h1>
+							<span>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</span>
+						</div>
+					</div>
+					<div>
+						<img src="./png/project1.png" />
+						<div>
+							<h1>ReSpringBoard</h1>
+							<span>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</content>
+		<footer>
+			<span>Made with&nbsp;<a href="https://open.spotify.com/track/4nYhskJng5eVpFEYxoxW7t?si=c8033bd3336145df"><i class="fa-solid fa-heart fa-beat"></i></a>&nbsp;by Zielak</span>
+		</footer>
+		<button id="scrollToTop" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+		<script src="./js/script.js"></script>
+	</body>
 </html>

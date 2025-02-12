@@ -1,8 +1,4 @@
-var scrollToTopButton = document.getElementById(`scrollToTop`);
+var backToTopButton = document.getElementById(`backToTop`);
 
-window.onscroll = () => {
-    if(document.documentElement.scrollTop > 1) scrollToTopButton.style.display = `flex`;
-    else scrollToTopButton.style.display = `none`;
-};
-
-scrollToTop = () => document.documentElement.scrollTop = 0;
+window.onscroll = () => backToTopButton.style.display = (document.documentElement.scrollTop > 1) ? `flex` : `none`;
+backToTop = () => document.documentElement.scrollTop = 0;

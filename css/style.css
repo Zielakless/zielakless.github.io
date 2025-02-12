@@ -182,17 +182,30 @@ body > button, html > button {
   background-color: #151515;
   border: 1px solid #252525;
   border-radius: 5px;
-  bottom: 15px;
-  display: none;
   height: 18px;
   justify-content: center;
   padding: 10px;
   position: fixed;
-  right: 15px;
   width: 18px;
   z-index: 1;
 }
-body > button:hover, html > button:hover {
+body > button#musicPlayPause, html > button#musicPlayPause {
+  bottom: 15px;
+  display: flex;
+  left: 15px;
+}
+body > button#musicPlayPause:hover, html > button#musicPlayPause:hover {
+  filter: drop-shadow(0px 0px 5px #F0A5DF);
+}
+body > button#musicPlayPause > i, html > button#musicPlayPause > i {
+  color: #F0A5DF;
+}
+body > button#backToTop, html > button#backToTop {
+  bottom: 15px;
+  display: none;
+  right: 15px;
+}
+body > button#backToTop:hover, html > button#backToTop:hover {
   filter: drop-shadow(0px 0px 5px #FFFFFF);
 }
 

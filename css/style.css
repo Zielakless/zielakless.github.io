@@ -6,11 +6,6 @@
   font-family: "Susa";
   src: url("../ttf/Susa.ttf");
 }
-@keyframes blink {
-  50% {
-    color: transparent;
-  }
-}
 * {
   all: unset;
   color: #FFFFFF;
@@ -52,9 +47,80 @@ body > header, html > header {
   width: calc(100% - 100px);
 }
 body > header > h1, html > header > h1 {
-  background-image: linear-gradient(-45deg, #F64F59 0%, #C471ED 50%, #12C2E9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  animation: flicker 1s infinite alternate;
+}
+body > header > h1::before, body > header > h1::after, html > header > h1::before, html > header > h1::after {
+  content: "Zielak";
+  padding-left: 50px;
+  position: absolute;
+}
+body > header > h1::before, html > header > h1::before {
+  animation: glitch 2.5s infinite alternate;
+  left: 3px;
+  text-shadow: -7.5px 0 #ED00F3;
+}
+body > header > h1::after, html > header > h1::after {
+  animation: glitch 2.5s infinite alternate;
+  left: -3px;
+  text-shadow: 7.5px 0 #332999;
+}
+@keyframes glitch {
+  0% {
+    clip: rect(67px, 350px, 24px, 25px);
+  }
+  6.6666666667% {
+    clip: rect(113px, 350px, 97px, 25px);
+  }
+  13.3333333333% {
+    clip: rect(20px, 350px, 68px, 25px);
+  }
+  20% {
+    clip: rect(77px, 350px, 81px, 25px);
+  }
+  26.6666666667% {
+    clip: rect(134px, 350px, 103px, 25px);
+  }
+  33.3333333333% {
+    clip: rect(30px, 350px, 37px, 25px);
+  }
+  40% {
+    clip: rect(34px, 350px, 65px, 25px);
+  }
+  46.6666666667% {
+    clip: rect(29px, 350px, 88px, 25px);
+  }
+  53.3333333333% {
+    clip: rect(23px, 350px, 136px, 25px);
+  }
+  60% {
+    clip: rect(48px, 350px, 96px, 25px);
+  }
+  66.6666666667% {
+    clip: rect(3px, 350px, 128px, 25px);
+  }
+  73.3333333333% {
+    clip: rect(11px, 350px, 143px, 25px);
+  }
+  80% {
+    clip: rect(5px, 350px, 82px, 25px);
+  }
+  86.6666666667% {
+    clip: rect(146px, 350px, 87px, 25px);
+  }
+  93.3333333333% {
+    clip: rect(101px, 350px, 22px, 25px);
+  }
+  100% {
+    clip: rect(61px, 350px, 94px, 25px);
+  }
+}
+@keyframes flicker {
+  0%, 17.5%, 22.5%, 25%, 52.5%, 55%, 100% {
+    text-shadow: 0px 0px 10px #FFFFFF, 0px 0px 15px #600080, 0px 0px 25px #600080, 0px 0px 30px #600080;
+  }
+  20%, 23.75%, 53.75% {
+    text-shadow: none;
+  }
 }
 body > header > div, html > header > div {
   display: flex;
@@ -98,8 +164,13 @@ body > content > div#about > div > h2, html > content > div#about > div > h2 {
   width: 650px;
 }
 body > content > div#about > div > h2::after, html > content > div#about > div > h2::after {
-  animation: blink 1s infinite;
+  animation: blink 1s infinite alternate;
   content: "|";
+}
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
 }
 body > content > div#about > div > div, html > content > div#about > div > div {
   align-items: center;

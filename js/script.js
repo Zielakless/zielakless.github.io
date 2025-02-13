@@ -1,5 +1,5 @@
 var index = 0,
-    aboutMe = "My name is Chris, also known as \"Zielak\" - a 21yo full-stack developer living in Poland. I'm developing various things as a hobby, like HTML websites, Node.JS apps, Discord bots, iOS jailbreak tweaks, Unity games and many more. I love minimalistic and simple things; if you love too, check my work - you might like some!";
+    aboutMe = "My name is Chris, also known as \"Zielak\" - a 21yo full-stack developer living in Poland. I'm developing various things as a hobby, like HTML websites, Node.JS apps, Discord bots, iOS jailbreak tweaks, Unity games and many more. I love minimalistic and simple things; if you love too, check out my projects - you might like some!";
 
 typeWrite = () => {
     if(index < aboutMe.length) {

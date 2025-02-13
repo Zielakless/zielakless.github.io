@@ -12,8 +12,6 @@ $shadow: #252525;
 	src: url("../ttf/Susa.ttf");
 }
 
-@keyframes blink { 50% { color: transparent; } }
-
 * {
 	all: unset;
 	color: #FFFFFF;
@@ -34,9 +32,38 @@ a, button {
 body, html {
 	& > header {
 		& > h1 {
-			background-image: linear-gradient(-45deg, #F64F59 0%, #C471ED 50%, #12C2E9 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+			&::before, &::after {
+				content: "Zielak";
+				padding-left: 50px;
+				position: absolute;
+			}
+
+			&::before {
+				animation: glitch 2.5s infinite alternate;
+				left: 3px;
+				text-shadow: -7.5px 0 #ED00F3;
+			}
+
+			&::after {
+				animation: glitch 2.5s infinite alternate;
+				left: -3px;
+				text-shadow: 7.5px 0 #332999;
+			}
+
+			@keyframes glitch {
+				@for $i from 0 through 15 {
+					#{percentage($i * (1 / 15))} {
+						clip: rect(#{random(150)}px, 350px, #{random(150)}px, 25px);
+					}
+				}
+			}
+
+			animation: flicker 1s infinite alternate;
+
+			@keyframes flicker {
+				0%, 17.5%, 22.5%, 25%, 52.5%, 55%, 100% { text-shadow: 0px 0px 10px #FFFFFF, 0px 0px 15px #600080, 0px 0px 25px #600080, 0px 0px 30px #600080; }
+				20%, 23.75%, 53.75% { text-shadow: none; }
+			}
 		}
 
 		& > div {
@@ -72,9 +99,11 @@ body, html {
 				& > div {
 					& > h2 {
 						&::after {
-							animation: blink 1s infinite;
+							animation: blink 1s infinite alternate;
 							content: "|";
 						}
+
+						@keyframes blink { 50% { color: transparent; } }
 
 						text-align: center;
 						width: 650px;

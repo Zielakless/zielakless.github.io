@@ -6,6 +6,11 @@
   font-family: "Susa";
   src: url("../ttf/Susa.ttf");
 }
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}
 * {
   all: unset;
   color: #FFFFFF;
@@ -89,12 +94,34 @@ body > content > div#about > div, html > content > div#about > div {
   gap: 25px;
 }
 body > content > div#about > div > h2, html > content > div#about > div > h2 {
+  text-align: center;
   width: 650px;
+}
+body > content > div#about > div > h2::after, html > content > div#about > div > h2::after {
+  animation: blink 1s infinite;
+  content: "|";
 }
 body > content > div#about > div > div, html > content > div#about > div > div {
   align-items: center;
   display: flex;
   gap: 15px;
+}
+body > content > div#about > div > div > button, html > content > div#about > div > div > button {
+  align-items: center;
+  background-color: #151515;
+  border: 1px solid #252525;
+  border-radius: 5px;
+  display: flex;
+  height: 18px;
+  justify-content: center;
+  padding: 10px;
+  width: 18px;
+}
+body > content > div#about > div > div > button:hover, html > content > div#about > div > div > button:hover {
+  filter: drop-shadow(0px 0px 5px var(--highlightColor));
+}
+body > content > div#about > div > div > button:hover > i, html > content > div#about > div > div > button:hover > i {
+  color: var(--highlightColor);
 }
 body > content > div#about > div > div > a, html > content > div#about > div > div > a {
   align-items: center;
@@ -195,10 +222,10 @@ body > button#musicPlayPause, html > button#musicPlayPause {
   left: 15px;
 }
 body > button#musicPlayPause:hover, html > button#musicPlayPause:hover {
-  filter: drop-shadow(0px 0px 5px #F0A5DF);
+  filter: drop-shadow(0px 0px 5px #600080);
 }
 body > button#musicPlayPause > i, html > button#musicPlayPause > i {
-  color: #F0A5DF;
+  color: #600080;
 }
 body > button#backToTop, html > button#backToTop {
   bottom: 15px;

@@ -1,8 +1,6 @@
 $primary: #101010;
 $secondary: #151515;
 $shadow: #252525;
-$gradient: #F64F59 0%, #C471ED 50%, #12C2E9 100%;
-$rivendell: #F0A5DF;
 
 @font-face {
 	font-family: "Sono";
@@ -13,6 +11,8 @@ $rivendell: #F0A5DF;
 	font-family: "Susa";
 	src: url("../ttf/Susa.ttf");
 }
+
+@keyframes blink { 50% { color: transparent; } }
 
 * {
 	all: unset;
@@ -34,7 +34,7 @@ a, button {
 body, html {
 	& > header {
 		& > h1 {
-			background-image: linear-gradient(-45deg, $gradient);
+			background-image: linear-gradient(-45deg, #F64F59 0%, #C471ED 50%, #12C2E9 100%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 		}
@@ -70,8 +70,35 @@ body, html {
 		& > div {
 			&#about {
 				& > div {
-					& > h2 { width: 650px; }
+					& > h2 {
+						&::after {
+							animation: blink 1s infinite;
+							content: "|";
+						}
+
+						text-align: center;
+						width: 650px;
+					}
+
 					& > div {
+						& > button {
+							&:hover {
+								& > i { color: var(--highlightColor); }
+
+								filter: drop-shadow(0px 0px 5px var(--highlightColor));
+							}
+
+							align-items: center;
+							background-color: $secondary;
+							border: 1px solid $shadow;
+							border-radius: 5px;
+							display: flex;
+							height: 18px;
+							justify-content: center;
+							padding: 10px;
+							width: 18px;
+						}
+
 						& > a {
 							&:hover {
 								& > i { color: var(--highlightColor); }
@@ -192,8 +219,8 @@ body, html {
 
 	& > button {
 		&#musicPlayPause {
-			&:hover { filter: drop-shadow(0px 0px 5px $rivendell); }
-			& > i { color: $rivendell; }
+			&:hover { filter: drop-shadow(0px 0px 5px #600080); }
+			& > i { color: #600080; }
 
 			bottom: 15px;
 			display: flex;

@@ -66,52 +66,52 @@ body > header > h1::after, html > header > h1::after {
 }
 @keyframes glitch {
   0% {
-    clip: rect(67px, 350px, 24px, 25px);
+    clip: rect(46px, 350px, 114px, 25px);
   }
   6.6666666667% {
-    clip: rect(113px, 350px, 97px, 25px);
+    clip: rect(34px, 350px, 48px, 25px);
   }
   13.3333333333% {
-    clip: rect(20px, 350px, 68px, 25px);
+    clip: rect(85px, 350px, 149px, 25px);
   }
   20% {
-    clip: rect(77px, 350px, 81px, 25px);
+    clip: rect(3px, 350px, 112px, 25px);
   }
   26.6666666667% {
-    clip: rect(134px, 350px, 103px, 25px);
+    clip: rect(128px, 350px, 144px, 25px);
   }
   33.3333333333% {
-    clip: rect(30px, 350px, 37px, 25px);
+    clip: rect(113px, 350px, 53px, 25px);
   }
   40% {
-    clip: rect(34px, 350px, 65px, 25px);
+    clip: rect(138px, 350px, 94px, 25px);
   }
   46.6666666667% {
-    clip: rect(29px, 350px, 88px, 25px);
+    clip: rect(63px, 350px, 106px, 25px);
   }
   53.3333333333% {
-    clip: rect(23px, 350px, 136px, 25px);
+    clip: rect(27px, 350px, 44px, 25px);
   }
   60% {
-    clip: rect(48px, 350px, 96px, 25px);
+    clip: rect(11px, 350px, 137px, 25px);
   }
   66.6666666667% {
-    clip: rect(3px, 350px, 128px, 25px);
+    clip: rect(21px, 350px, 59px, 25px);
   }
   73.3333333333% {
-    clip: rect(11px, 350px, 143px, 25px);
+    clip: rect(89px, 350px, 132px, 25px);
   }
   80% {
-    clip: rect(5px, 350px, 82px, 25px);
+    clip: rect(104px, 350px, 101px, 25px);
   }
   86.6666666667% {
-    clip: rect(146px, 350px, 87px, 25px);
+    clip: rect(21px, 350px, 44px, 25px);
   }
   93.3333333333% {
-    clip: rect(101px, 350px, 22px, 25px);
+    clip: rect(130px, 350px, 48px, 25px);
   }
   100% {
-    clip: rect(61px, 350px, 94px, 25px);
+    clip: rect(94px, 350px, 70px, 25px);
   }
 }
 @keyframes flicker {
@@ -152,6 +152,36 @@ body > content > div#about, html > content > div#about {
   background-color: transparent;
   height: calc(100vh - 50px);
   justify-content: center;
+}
+body > content > div#about > ul, html > content > div#about > ul {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+body > content > div#about > ul > span, html > content > div#about > ul > span {
+  animation: wave 2.5s ease-in-out infinite;
+  font-size: 35px;
+  transform-origin: 70% 70%;
+}
+@keyframes wave {
+  0%, 70%, 100% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(8deg);
+  }
 }
 body > content > div#about > div, html > content > div#about > div {
   align-items: center;

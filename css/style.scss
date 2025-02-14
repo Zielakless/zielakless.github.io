@@ -96,6 +96,27 @@ body, html {
 	& > content {
 		& > div {
 			&#about {
+				& > ul {
+					& > span {
+						animation: wave 2.5s ease-in-out infinite;
+						font-size: 35px;
+						transform-origin: 70% 70%;
+					}
+
+					@keyframes wave {
+						0%, 70%, 100% { transform: rotate(0deg) }
+						15% { transform: rotate(14deg) }
+						30% { transform: rotate(-8deg) }
+						40% { transform: rotate(14deg) }
+						50% { transform: rotate(-4deg) }
+						60% { transform: rotate(8deg) }
+					}
+
+					align-items: center;
+					display: flex;
+					flex-direction: column;
+				}
+
 				& > div {
 					& > h2 {
 						&::after {

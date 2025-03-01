@@ -101,6 +101,7 @@ body, html {
 						animation: wave 2.5s ease-in-out infinite;
 						font-size: 35px;
 						transform-origin: 70% 70%;
+						z-index: -1;
 					}
 
 					@keyframes wave {
